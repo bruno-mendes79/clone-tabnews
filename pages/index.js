@@ -1,5 +1,10 @@
 function Home() {
-  return <h1>Página em construção</h1>;
+  console.log(process.env.NODE_ENV);
+  return (
+    <>
+      <h1>Página em construção</h1>
+    </>
+  );
 }
 
 export default Home;
