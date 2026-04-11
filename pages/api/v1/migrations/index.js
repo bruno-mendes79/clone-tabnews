@@ -17,11 +17,6 @@ export default async function migrations(request, response) {
     await dbClient.end();
     return response.status(200).json(pendingMigrations);
   }
-  if (request.method === "DELETE") {
-    return response
-      .status(201)
-      .json({ "Method:": "delete executado com sucesso!" });
-  }
 
   if (request.method === "POST") {
     const migretedMigrations = await migrationRunner({
